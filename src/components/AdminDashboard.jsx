@@ -81,10 +81,10 @@ const AdminDashboard = () => {
 
       <form onSubmit={handleSubmit}>
         <h3>Add New Transformation</h3>
-        <input name="name" placeholder="Name" onChange={handleChange} required />
-        <input name="age" type="number" placeholder="Age" onChange={handleChange} required />
-        <input name="goal" placeholder="Goal" onChange={handleChange} required />
-        <textarea name="description" placeholder="Description" onChange={handleChange} required />
+        <input name="name" value={form.name} placeholder="Name" onChange={handleChange} required />
+        <input name="age" type="number" value={form.age} placeholder="Age" onChange={handleChange} required />
+        <input name="goal" placeholder="Goal" value={form.goal} onChange={handleChange} required />
+        <textarea name="description" placeholder="Description" value={form.description} onChange={handleChange} required />
         <input type="file" name="imageBefore" onChange={handleFileChange} required />
         <input type="file" name="imageAfter" onChange={handleFileChange} required />
         <button type="submit">Add</button>
@@ -107,8 +107,8 @@ const AdminDashboard = () => {
         <tbody>
           {data.map(item => (
             <tr key={item._id}>
-              <td><img src={`${process.env.REACT_APP_API_URL}${item.imageBefore}`} width="80" /></td>
-              <td><img src={`${process.env.REACT_APP_API_URL}${item.imageAfter}`} width="80" /></td>
+              <td><img src={`${process.env.REACT_APP_API_URL}${item.imageBefore}`} width="80" alt={`${item.name} before progress`} /></td>
+              <td><img src={`${process.env.REACT_APP_API_URL}${item.imageAfter}`} width="80" alt={`${item.name} after progress`}/></td>
               <td>{item.name}</td>
               <td>{item.age}</td>
               <td>{item.goal}</td>

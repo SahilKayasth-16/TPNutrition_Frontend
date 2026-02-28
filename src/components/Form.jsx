@@ -13,7 +13,6 @@ const Form = () => {
         weight: '',
         city: '',
         contact: '',
-        description: '',
         medical: {
             obesity: false,
             pcod_pcos: false,
@@ -131,7 +130,7 @@ const Form = () => {
                 <nav className='navigationBar'>
                     <div className="container">
                         <a href={pdf} target="_blank" rel="noopener noreferrer">
-                            <img src={Logo} alt="There is an logo" height={55} width={55} id='logo'/>
+                            <img src={Logo} alt="TP Nutrition logo" height={55} width={55} id='logo'/>
                         </a>
                         <span>&nbsp;&nbsp;&nbsp;TP Nutrition</span>
                     </div>

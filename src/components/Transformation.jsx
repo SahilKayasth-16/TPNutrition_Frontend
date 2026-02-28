@@ -29,7 +29,7 @@ const Transformation = () => {
         <nav className='navigationBar'>
           <div className="container">
             <a href={pdf} target="_blank" rel="noopener noreferrer">
-              <img src={Logo} alt="Logo" height={55} width={55} id='logo' />
+              <img src={Logo} alt="TP Nutrition logo" height={55} width={55} id='logo' />
             </a>
             <span>&nbsp;&nbsp;&nbsp;TP Nutrition</span>
           </div>
@@ -53,12 +53,12 @@ const Transformation = () => {
                 <div className="img">
                   <img
                     src={`${process.env.REACT_APP_API_URL}${client.imageBefore}`}
-                    alt="Before"
+                    alt={`${client.name} before transformation`}
                     className="beforeImg"
                   />
                   <img
                     src={`${process.env.REACT_APP_API_URL}${client.imageAfter}`}
-                    alt="After"
+                    alt={`${client.name} after transformation`}
                     className="afterImg"
                   />
                 </div>

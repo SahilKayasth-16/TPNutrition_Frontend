@@ -24,7 +24,7 @@ const About = () => {
                 <nav className='navigationBar'>
                     <div className="container">
                         <a href={pdf} target="_blank" rel="noopener noreferrer">
-                            <img src={Logo} alt="There is an logo" height={55} width={55} id='logo'/>
+                            <img src={Logo} alt="TP Nutrition logo" height={55} width={55} id='logo'/>
                         </a>
                         <span>&nbsp;&nbsp;&nbsp;TP Nutrition</span>
                     </div>
@@ -54,7 +54,7 @@ const About = () => {
                             <div className="item">
                                 <div className="image">
                                     <a href={FI_FITLINK} target="_blank" rel="noreferrer noopener">
-                                        <img src={FI_FITLINK} alt="There is an logo" height={125} width={125} id='cert_img'/>
+                                        <img src={FI_FITLINK} alt="Fitness Instructor Certificate by Fitlink" height={125} width={125} id='cert_img'/>
                                     </a>    
                                 </div>
                                 <div className="description1">
@@ -65,7 +65,7 @@ const About = () => {
                             <div className="item">
                                 <div className="image">
                                     <a href={GOMZI} target="_blank" rel="noreferrer noopener">
-                                        <img src={GOMZI} alt="There is an logo" height={125} width={125} id='cert_img'/>
+                                        <img src={GOMZI} alt="GOMZI International Institute of Teaching certificate" height={125} width={125} id='cert_img'/>
                                     </a> 
                                 </div>
                                 <div className="description">
@@ -76,7 +76,7 @@ const About = () => {
                             <div className="item">
                                 <div className="image">
                                     <a href={NCVET} target="_blank" rel="noreferrer noopener">
-                                        <img src={NCVET} alt="There is an logo" height={125} width={125} id='cert_img'/>
+                                        <img src={NCVET} alt="National Council for Vocational Education & Training certificate" height={125} width={125} id='cert_img'/>
                                     </a>
                                 </div>
                                 <div className="description">
@@ -87,7 +87,7 @@ const About = () => {
                             <div className="item">
                                 <div className="image">
                                     <a href={PT_FITLINK} target="_blank" rel="noreferrer noopener">
-                                        <img src={PT_FITLINK} alt="There is an logo" height={125} width={125} id='cert_img'/>
+                                        <img src={PT_FITLINK} alt="Personal Trainer Certificate" height={125} width={125} id='cert_img'/>
                                     </a> 
                                 </div>
                                 <div className="description">
@@ -98,7 +98,7 @@ const About = () => {
                             <div className="item">
                                 <div className="image">
                                     <a href={PT_FSSA}  target="_blank" rel="noreferrer noopener">
-                                        <img src={PT_FSSA} alt="There is an logo" height={125} width={125} id='cert_img'/>
+                                        <img src={PT_FSSA} alt="Personal Trainer Certificate by Fitness & Sports Science Association" height={125} width={125} id='cert_img'/>
                                     </a>
                                 </div>
                                 <div className="description">
@@ -109,7 +109,7 @@ const About = () => {
                             <div className="item">
                                 <div className="image">
                                     <a href={PT_SAHSS} target="_blank" rel="noreferrer noopener">
-                                        <img src={PT_SAHSS} alt="There is an logo" height={125} width={125} id='cert_img'/>
+                                        <img src={PT_SAHSS} alt="Personal Trainer Certificate by SAHSS & FSSA" height={125} width={125} id='cert_img'/>
                                     </a>  
                                 </div>
                                 <div className="description">
@@ -120,7 +120,7 @@ const About = () => {
                             <div className="item">
                                 <div className="image">
                                     <a href={SUPPLEMENT_FITLINK} target="_blank" rel="noreferrer noopener">
-                                        <img src={SUPPLEMENT_FITLINK} alt="There is an logo" height={125} width={125} id='cert_img'/>
+                                        <img src={SUPPLEMENT_FITLINK} alt="Sports Nutrition  & Supplementation Certificate by Fitlink" height={125} width={125} id='cert_img'/>
                                     </a>                               
                                 </div>
                                 <div className="description">
