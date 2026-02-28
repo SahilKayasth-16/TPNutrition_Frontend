@@ -1,4 +1,4 @@
-import React from React;
+import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import "../styles/Home.css";
 import Logo from '../assets/logo.png';
