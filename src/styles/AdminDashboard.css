@@ -1,7 +1,16 @@
 /* 🌟 Admin Dashboard Styling 🌟 */
 
+/* Prevent page-level horizontal scroll and layout shifting globally */
+html, 
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .admin-dashboard-container {
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
   /* Blend the client background with a premium dark overlay */
   background: linear-gradient(rgba(12, 91, 26, 0.4), rgba(15, 23, 17, 0.95)), url('../assets/background.jpg');
   background-size: cover;
@@ -30,6 +39,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  width: 100%;
 }
 
 .admin-header-brand {
@@ -56,6 +66,7 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   color: #fff;
+  white-space: nowrap;
 }
 
 .admin-header-separator {
@@ -68,6 +79,7 @@
   font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .admin-header-actions {
@@ -140,6 +152,8 @@
   padding: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
+  min-width: 0; /* CRITICAL: Allows grid item to shrink and prevents table overflow from stretching page */
+  width: 100%;
 }
 
 /* 📝 Add Transformation Form */
@@ -153,6 +167,7 @@
   padding: 0;
   border-radius: 0;
   box-shadow: none;
+  text-align: left; /* Ensure all form contents are cleanly left-aligned */
 }
 
 .admin-form h3 {
@@ -179,8 +194,8 @@
   letter-spacing: 0.5px;
 }
 
-.admin-form input[type="text"],
-.admin-form input[type="number"],
+/* Style all input fields (excluding files/submits) and textareas consistently */
+.admin-form input:not([type="submit"]):not([type="file"]),
 .admin-form textarea {
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -191,14 +206,20 @@
   transition: all 0.3s ease;
   outline: none;
   box-sizing: border-box;
+  width: 100%;
 }
 
-.admin-form input[type="text"]:focus,
-.admin-form input[type="number"]:focus,
+.admin-form input:not([type="submit"]):not([type="file"]):focus,
 .admin-form textarea:focus {
   border-color: #2ecc71;
   background: rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.18);
+}
+
+/* Legible Light Placeholder Text */
+.admin-form input::placeholder,
+.admin-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .admin-form textarea {
@@ -208,9 +229,9 @@
 
 /* File Field Row */
 .form-group-files {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 .file-field {
@@ -231,6 +252,8 @@
   font-size: 0.85rem;
   color: #cfdcd3;
   padding: 4px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .file-field input[type="file"]::file-selector-button {
@@ -516,6 +539,7 @@
   }
 
   .form-group-files {
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
@@ -530,14 +554,22 @@
   }
 }
 
-/* 📱 Small Phones View (max-width: 480px) */
+/* 📱 Small Mobile View (max-width: 580px) */
+@media (max-width: 580px) {
+  .admin-header-separator,
+  .admin-page-title {
+    display: none; /* Hide the separator and page title to keep header text readable */
+  }
+
+  .admin-brand-name {
+    font-size: 1.15rem;
+  }
+}
+
+/* 📱 Ultra Small Phones View (max-width: 480px) */
 @media (max-width: 480px) {
   .admin-brand-name {
     font-size: 1.1rem;
-  }
-
-  .admin-page-title {
-    font-size: 0.85rem;
   }
 
   .admin-logo {
@@ -554,4 +586,5 @@
     font-size: 0.78rem;
   }
 }
+
 
