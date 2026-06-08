@@ -144,7 +144,7 @@ const Form = () => {
                 </nav>
             </header>
 
-            <section>
+            <section className="consultation-section">
                 <h1>Personal Training Client Intake Form:</h1>
                 <div className="disclaimer">
                     <h2><strong>Disclaimer:</strong></h2>
@@ -159,8 +159,16 @@ const Form = () => {
                     {errors.name && <p style={{color: 'red'}}>{errors.name}</p>}<br /><br />
 
                     <label>Gender:</label>
-                    <input type="radio" name="gender" value="Male" checked={formData.gender === 'Male'} onChange={handleGenderChange} /> Male
-                    <input type="radio" name="gender" value="Female" checked={formData.gender === 'Female'} onChange={handleGenderChange} /> Female
+                    <div className="radio-group">
+                        <label className="radio-label">
+                            <input type="radio" name="gender" value="Male" checked={formData.gender === 'Male'} onChange={handleGenderChange} />
+                            <span>Male</span>
+                        </label>
+                        <label className="radio-label">
+                            <input type="radio" name="gender" value="Female" checked={formData.gender === 'Female'} onChange={handleGenderChange} />
+                            <span>Female</span>
+                        </label>
+                    </div>
                     {errors.gender && <p style={{color: 'red'}}>{errors.gender}</p>}<br /><br />
 
                     <label>Age:</label>
