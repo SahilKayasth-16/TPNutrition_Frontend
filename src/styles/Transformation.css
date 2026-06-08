@@ -28,61 +28,6 @@ html {
   font-size: 2.5rem;
 }
 
-/* Navigation Bar */
-.navigationBar {
-  background-image: linear-gradient(#0c5b1a, #282525);
-  color: #fff;
-  padding: 0.75rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  animation: slideDown 0.8s ease-in-out;
-  position: sticky; /* Keeps nav visible while scrolling */
-  top: 0;
-  z-index: 1000;
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.navigationBar .container {
-  display: flex;
-  align-items: center;
-}
-
-.navigationBar span {
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-#logo {
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-  display: block;
-}
-
-.container1 ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.container1 a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.container1 a:hover {
-  color: #00b894;
-  transform: translateY(-2px);
-}
 
 /* Grid Section */
 .imageSection {
@@ -160,17 +105,7 @@ html {
 }
 
 @media (max-width: 768px) {
-  .navigationBar {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-  }
 
-  .navigationBar ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
 
   .imageSection {
     flex-direction: column;

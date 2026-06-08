@@ -1,9 +1,8 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import "../styles/Home.css";
-import Logo from '../assets/logo.png';
-import pdf from '../assets/tp_logo.pdf';
 import Img from '../assets/tanay.jpg';
+import Navbar from './Navbar';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -19,23 +18,7 @@ const Home = () => {
                      backgroundRepeat: 'no-repeat',
                      backgroundAttachment: 'fixed',
                      height: '100vh'}}>
-            <header>
-                <nav className='navigationBar'>
-                    <div className="container">
-                        <a href={pdf} target="_blank" rel="noopener noreferrer">
-                            <img src={Logo} alt="TP Nutrition logo" height={55} width={55} id='logo'/>
-                        </a>
-                        <span>&nbsp;&nbsp;&nbsp;TP Nutrition</span>
-                    </div>
-                    <div className="container1">
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/About">About</Link></li>
-                            <li><Link to="/Transformation">Transformation</Link></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
+            <Navbar />
             <section>
                 <div className="img">
                     <img src={Img} alt="Couldn't load it" height={425} width={425} />

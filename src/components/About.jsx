@@ -1,8 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/About.css";
-import Logo from '../assets/logo.png';
-import pdf from '../assets/tp_logo.pdf';
 import FI_FITLINK from '../assets/Fitness_Instructor_FITLINK.jpeg';
 import GOMZI from '../assets/GOMZI_Certificate.jpeg';
 import NCVET from '../assets/NCVET_Certificate.jpeg';
@@ -10,6 +7,7 @@ import PT_FITLINK from '../assets/Personal_Trainer_FITLINK.jpeg';
 import PT_FSSA from '../assets/Personal_Trainer_FSSA.jpg';
 import PT_SAHSS from '../assets/Personal_Trainer_SAHSS.png';
 import SUPPLEMENT_FITLINK from '../assets/Supplementation_FITLINK.jpeg';
+import Navbar from './Navbar';
 
 const About = () => {
     return (
@@ -19,25 +17,7 @@ const About = () => {
                      backgroundPosition: 'center',
                      backgroundRepeat: 'no-repeat',
                      height: '100vh'}}>
-            <header>
-
-                <nav className='navigationBar'>
-                    <div className="container">
-                        <a href={pdf} target="_blank" rel="noopener noreferrer">
-                            <img src={Logo} alt="TP Nutrition logo" height={55} width={55} id='logo'/>
-                        </a>
-                        <span>&nbsp;&nbsp;&nbsp;TP Nutrition</span>
-                    </div>
-                    <div className="container1">
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/About">About</Link></li>
-                            <li><Link to="/Transformation">Transformation</Link></li>
-                        </ul>
-                    </div>
-                </nav>
-
-            </header>
+            <Navbar />
 
             <section>
                     <div className="Education">

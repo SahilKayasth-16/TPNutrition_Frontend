@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import "../styles/Form.css";
-import Logo from '../assets/logo.png';
-import pdf from '../assets/tp_logo.pdf';
+import Navbar from './Navbar';
 
 const Form = () => {
     const [formData, setFormData] = useState({
@@ -126,23 +124,7 @@ const Form = () => {
             backgroundRepeat: 'no-repeat',
             minHeight: '100vh',
         }}>
-            <header>
-                <nav className='navigationBar'>
-                    <div className="container">
-                        <a href={pdf} target="_blank" rel="noopener noreferrer">
-                            <img src={Logo} alt="TP Nutrition logo" height={55} width={55} id='logo'/>
-                        </a>
-                        <span>&nbsp;&nbsp;&nbsp;TP Nutrition</span>
-                    </div>
-                    <div className="container1">
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/About">About</Link></li>
-                            <li><Link to="/Transformation">Transformation</Link></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
+            <Navbar />
 
             <section className="consultation-section">
                 <h1>Personal Training Client Intake Form:</h1>
